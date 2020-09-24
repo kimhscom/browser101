@@ -1,2 +1,3 @@
-# browser101
- Front-End essential browser 101
+# Browser 101
+
+Front-End essential browser 101
