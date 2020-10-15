@@ -47,6 +47,13 @@
       h2.textContent = `This is a title`; // <h2 class="title">This is a title</h2>
       const h3 = document.querySelector("h3");
       section.insertBefore(h2, h3);
+
+      /* section.innerHTML = `
+        <img src="img/avatar.png" alt="avatar" />
+        <h1 id="brand">Lion King</h1>
+        <h3>A brave spirit that is not afraid of challenges</h3>
+      `; */
+      section.removeChild(h2);
     </script>
   </body>
 </html>
