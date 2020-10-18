@@ -13,7 +13,9 @@ const onAdd = () => {
   const item = createItem(text);
   // 3. Add the newly created item in the items container.
   items.appendChild(item);
-  // 4. Initialize input.
+  // 4. Scrolling to newly added items
+  item.scrollIntoView({ block: "center" });
+  // 5. Initialize input.
   input.value = "";
   input.focus();
 };
@@ -52,5 +54,7 @@ addBtn.addEventListener("click", () => {
 });
 
 input.addEventListener("keypress", (event) => {
-  console.log("key");
+  if (event.key === "Enter") {
+    onAdd();
+  }
 });
