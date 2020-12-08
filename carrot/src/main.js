@@ -1,10 +1,14 @@
 "use strict";
 
 import PopUp from "./popup.js";
-import Game from "./game.js";
+import GameBuilder from "./game.js";
 
 const gameFinishBanner = new PopUp();
-const game = new Game(20, 10, 10);
+const game = new GameBuilder()
+  .gameDuration(20)
+  .carrotCount(10)
+  .bugCount(10)
+  .build();
 
 game.setGameStopListener((reason) => {
   let message;
